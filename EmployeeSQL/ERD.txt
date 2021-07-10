@@ -1,0 +1,35 @@
+Departments
+-
+dept_no VARCHAR(4) FK >- DeptManagers.dept_no
+dept_name VARCHAR(50)
+
+DeptManagers
+-
+dept_no VARCHAR(4) FK >- DeptEmployees.dept_no
+emp_no INT
+
+DeptEmployees
+----
+emp_no INT
+dept_no VARCHAR(4)
+
+# Table documentation comment 1 (try the PDF/RTF export)
+Employees 
+------------
+emp_no INT FK >- DeptManagers.emp_no
+emp_title
+birth_date VARCHAR(20)
+first_name VARCHAR(20)
+last_name VARCHAR(20)
+sex VARCHAR(4)
+hire_date VARCHAR(15)
+
+Salaries
+----
+emp_no INT FK >- DeptManagers.emp_no
+salary INT
+
+Titles
+-----
+title_id VARCHAR(10)
+title VARCHAR(20) FK >- Employees.emp_title
