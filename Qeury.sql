@@ -27,4 +27,8 @@ ON dept_emp.dept_no = depts.dept_no
 LEFT JOIN emp
 ON dept_emp.emp_no = emp.emp_no;
 
+SELECT emp_firstname, emp_lastname, emp_sex
+FROM emp
+WHERE emp_firstname = 'Hercules' and emp_lastname like 'B%';
+
 
