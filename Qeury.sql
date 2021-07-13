@@ -19,3 +19,12 @@ ON dept_managers.dept_no = depts.dept_no
 LEFT JOIN emp
 ON dept_managers.emp_no = emp.emp_no;
 
+
+SELECT  emp.emp_no, emp.emp_lastname, emp.emp_firstname, depts.dept_name
+FROM dept_emp
+LEFT JOIN depts
+ON dept_emp.dept_no = depts.dept_no
+LEFT JOIN emp
+ON dept_emp.emp_no = emp.emp_no;
+
+
