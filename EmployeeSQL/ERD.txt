@@ -1,35 +1,34 @@
-Departments
--
-dept_no VARCHAR(4) FK >- DeptManagers.dept_no
+Depts
+----------------
+dept_no VARCHAR(4) PK
 dept_name VARCHAR(50)
 
-DeptManagers
--
-dept_no VARCHAR(4) FK >- DeptEmployees.dept_no
-emp_no INT
+Dept_Managers
+------------------
+dept_no VARCHAR(4) FK - Depts.dept_no
+emp_no INT FK - Emp.emp_no
 
-DeptEmployees
-----
-emp_no INT
-dept_no VARCHAR(4)
+Dept_Employees
+-----------------
+emp_no INT FK - Emp.emp_no
+dept_no VARCHAR(4) FK - Depts.dept_no
 
-# Table documentation comment 1 (try the PDF/RTF export)
-Employees 
-------------
-emp_no INT FK >- DeptManagers.emp_no
-emp_title
-birth_date VARCHAR(20)
-first_name VARCHAR(20)
-last_name VARCHAR(20)
-sex VARCHAR(4)
-hire_date VARCHAR(15)
-
-Salaries
-----
-emp_no INT FK >- DeptManagers.emp_no
-salary INT
+Emp
+----------------
+emp_no INT PK
+emp_title INT
+emp_birthdate VARCHAR(20)
+emp_firstname VARCHAR(20)
+emp_lastname VARCHAR(20)
+emp_sex VARCHAR(4)
+emp_hiredate VARCHAR(15)
 
 Titles
------
-title_id VARCHAR(10)
-title VARCHAR(20) FK >- Employees.emp_title
+----------------
+title_id VARCHAR(10) FK >- Emp.emp_title
+title VARCHAR(20) PK
+
+Salaries
+------------------
+emp_no INT FK - Emp.emp_no
+emp_salary INT

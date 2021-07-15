@@ -53,4 +53,10 @@ ON depts.dept_no=dept_emp.dept_no
 WHERE depts.dept_name IN ('Sales', 'Development')
 
 
+--8
+SELECT emp.emp_lastname, COUNT(emp_lastname) AS "Last Name Count (DESC)"
+FROM emp
+GROUP BY emp_lastname
+ORDER BY "Last Name Count (DESC)" DESC;
+
 
