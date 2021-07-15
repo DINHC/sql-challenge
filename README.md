@@ -4,7 +4,7 @@ Data(CSVs), ERD Diagram + Text Can Be Found in The EmployeeSQL Folder
 
 Task:
 
--Create Tables and Import CSV for salaries, titles, employees, managers, and departments
+-Create Tables Schema and Import CSV for salaries, titles, employees, managers, and departments, department employees
 
 -Once tables are done, create SQL code to answer queries: 
 
