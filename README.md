@@ -1,5 +1,6 @@
 # sql-challenge
 
+Data(CSVs), ERD Diagram + Text Can Be Found in The EmployeeSQL Folder
 
 Task:
 
