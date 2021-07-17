@@ -9,10 +9,6 @@ SELECT emp.emp_firstname, emp.emp_lastname, emp.emp_hiredate
 FROM emp
 WHERE emp_hiredate LIKE '%1986';
 
-SELECT * FROM emp;
-SELECT * FROM dept_managers;
-SELECT * FROM depts;
-
 --3
 SELECT dept_managers.dept_no, depts.dept_name, dept_managers.emp_no, emp.emp_lastname, emp.emp_firstname
 FROM dept_managers
@@ -59,4 +55,11 @@ FROM emp
 GROUP BY emp_lastname
 ORDER BY "Last Name Count (DESC)" DESC;
 
-
+--Test
+--SELECT emp.emp_lastname, COUNT(emp_lastname) AS "Last Name Count (ASC)"
+--FROM emp
+--GROUP BY emp_lastname
+--ORDER BY "Last Name Count (ASC)" ASC;
+--SELECT * FROM emp;
+--SELECT * FROM dept_managers;
+--SELECT * FROM depts;
